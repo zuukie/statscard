@@ -89,7 +89,7 @@ body {
 
 @media (min-width: 992px) {
     .card {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 }
 
@@ -99,7 +99,7 @@ body {
 		width: 1325px;
 		max-width: none;
 		height: 520px;
-        transform: scale(1);
+        transform: scale(0.85);
 		&__img {
 			width: 48%;
 			height: 100%;
@@ -120,6 +120,7 @@ body {
             }
 			.stats {
 				display: flex;
+                justify-content: start;
 				.stat {
 					margin: 20px 70px 0px 0px;
                     h2 {
