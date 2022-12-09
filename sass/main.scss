@@ -1,0 +1,135 @@
+@use "./colors" as c;
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+// Fonts
+// font-family: 'Inter', sans-serif;
+// font-family: 'Lexend Deca', sans-serif;
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	color: c.$white;
+	background-color: c.$mainbg;
+}
+
+.card {
+	margin: 20px;
+	width: 80vw;
+	max-width: 400px;
+	height: 80vh;
+    max-height: 650px;
+	display: flex;
+	flex-direction: column;
+	background-color: c.$cardbg;
+	border-radius: 10px;
+	overflow: hidden;
+	&__img {
+		height: 310px;
+		background-image: c.$shadow, url("../images/image-header-mobile.jpg");
+		background-size: cover;
+		background-position: center;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 30px;
+		height: 100%;
+		text-align: center;
+		h1 {
+			font-size: 2.4rem;
+			font-family: "Inter", sans-serif;
+			.accent {
+				color: c.$accent;
+			}
+		}
+		p {
+			font-family: "Inter", sans-serif;
+			font-size: 1.4rem;
+			color: c.$paragraph;
+		}
+		.stats {
+			.stat {
+				margin: 20px;
+				font-family: "Inter", sans-serif;
+				h2 {
+					margin-bottom: 5px;
+					font-size: 2rem;
+				}
+				.description {
+					color: c.$stats;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					font-family: "Lexend Deca", sans-serif;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 576px) {
+    .card {
+        max-height: 500px;
+    .stats {
+        display: flex;
+        justify-content: center;
+    }
+}
+}
+
+@media (min-width: 992px) {
+    .card {
+        transform: scale(1.2);
+    }
+}
+
+@media (min-width: 1200px) {
+	.card {
+		flex-direction: row-reverse;
+		width: 1325px;
+		max-width: none;
+		height: 520px;
+        transform: scale(1);
+		&__img {
+			width: 48%;
+			height: 100%;
+			background-image: c.$shadow, url("../images/image-header-desktop.jpg");
+		}
+		&__text {
+			width: 52%;
+			padding: 80px;
+			text-align: left;
+			h1 {
+				font-size: 4.2rem;
+			}
+            p {
+                margin-top: -30px;
+                line-height: 1.65;
+                font-size: 1.8rem;
+                max-width: 470px;
+            }
+			.stats {
+				display: flex;
+				.stat {
+					margin: 20px 70px 0px 0px;
+                    h2 {
+                        font-size: 2.8rem;
+                    }
+                    .description {
+                        font-size: 1.5rem;
+                    }
+				}
+			}
+		}
+	}
+}

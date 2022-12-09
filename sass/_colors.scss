@@ -1,0 +1,10 @@
+// - Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+// - Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+$mainbg: hsl(233, 47%, 7%);
+$cardbg: hsl(244, 38%, 16%);
+$accent: #aa5cdb;
+$shadow: linear-gradient(rgba(103, 27, 151, 0.623), rgba(104, 27, 151, 0.623));
+$white: hsl(0, 0%, 100%);
+$paragraph: hsla(0, 0%, 100%, 0.75);
+$stats: hsla(0, 0%, 100%, 0.6);
